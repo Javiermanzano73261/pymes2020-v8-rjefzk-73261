@@ -1,12 +1,12 @@
 export class Empresa {
   IdEmpresa: number;
-  Nombre: string;
+  RazonSocial: string;
   FechaFundacion: string;
   CantidadEmpleados: number;
 
 
   /**IdEmpresa (pk autoincremental)
-Nombre: char(50)   “ojo que tiene tamaño fijo, se autocompleta con espacios”
+RazonSocial: char(50)   “ojo que tiene tamaño fijo, se autocompleta con espacios”
 FechaFundacion: Date
 CantidadEmpleados: int 
 */
