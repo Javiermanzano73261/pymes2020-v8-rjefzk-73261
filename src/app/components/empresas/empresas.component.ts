@@ -12,7 +12,7 @@ import { ModalDialogService } from "../../services/modal-dialog.service";
 export class EmpresasComponent implements OnInit {
  Titulo = "Empresas";
  TituloAccionABMC = {
-    A: "(Agregar)",
+    A: "(Alta)",
     L: "(Listado)"
   };
   AccionABMC = "L"; // inicialmente inicia en el listado de empresas (buscar con parametros)
@@ -61,7 +61,7 @@ export class EmpresasComponent implements OnInit {
   }
 
 
-  Agregar() {
+  Alta() {
     this.AccionABMC = "A";
     this.FormReg.reset({ });
     this.submitted = false;
