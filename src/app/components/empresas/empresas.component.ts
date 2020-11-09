@@ -13,9 +13,6 @@ export class EmpresasComponent implements OnInit {
  Titulo = "Empresas";
  TituloAccionABMC = {
     A: "(Agregar)",
-    B: "(Eliminar)",
-    M: "(Modificar)",
-    C: "(Consultar)",
     L: "(Listado)"
   };
   AccionABMC = "L"; // inicialmente inicia en el listado de empresas (buscar con parametros)
@@ -66,7 +63,7 @@ export class EmpresasComponent implements OnInit {
 
   Agregar() {
     this.AccionABMC = "A";
-    this.FormReg.reset({ Activo: true });
+    this.FormReg.reset({ });
     this.submitted = false;
     //this.FormReg.markAsPristine();
     this.FormReg.markAsUntouched();
