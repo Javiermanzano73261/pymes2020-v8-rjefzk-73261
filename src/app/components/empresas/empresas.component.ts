@@ -18,14 +18,13 @@ export class EmpresasComponent implements OnInit {
     C: "(Consultar)",
     L: "(Listado)"
   };
-  AccionABMC = "L"; // inicialmente inicia en el listado de articulos (buscar con parametros)
+  AccionABMC = "L"; // inicialmente inicia en el listado de empresas (buscar con parametros)
   Mensajes = {
     SD: " No se encontraron registros...",
     RD: " Revisar los datos ingresados..."
   };
 
   Lista: Empresa[] = [];
-  RegistrosTotal: number;
   SinBusquedasRealizadas = true;
 
   Pagina = 1; // inicia pagina 1
@@ -76,12 +75,9 @@ export class EmpresasComponent implements OnInit {
   // Buscar segun los filtros, establecidos en FormReg
   Buscar() {
     this.SinBusquedasRealizadas = false;
-    this.empresasService
-      .get(      )
-      .subscribe((res: any) => {
-        this.Lista = res.Lista;
-        this.RegistrosTotal = res.RegistrosTotal;
-      });
+    this.empresasService.get().subscribe((res: any) => {
+      this.Lista= res.Lista;
+    });
   }
 
 
