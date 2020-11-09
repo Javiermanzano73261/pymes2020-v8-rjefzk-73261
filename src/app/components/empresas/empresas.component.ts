@@ -73,7 +73,7 @@ export class EmpresasComponent implements OnInit {
   Buscar() {
     this.SinBusquedasRealizadas = false;
     this.empresasService.get().subscribe((res: any) => {
-      this.Lista= res.Lista;
+      this.Lista= res;
     });
   }
 
